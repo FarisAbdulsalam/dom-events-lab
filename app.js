@@ -1,3 +1,5 @@
+// can only do two numbers at a time (multiple digits per number work fine)
+// couldn't figure out how to do more than 2 numbers (ex: press 2 + 2 then press an operator to use the previous result as num1)
 /*-------------------------------- Constants --------------------------------*/
 /*-------------------------------- Variables --------------------------------*/
 let num1 = ''; //input 1
@@ -16,19 +18,16 @@ buttons.forEach((button) => {
             if(result !== ''){
                 clearData();
                 num1 = event.target.innerText;
+            }   else if(!operator){
+                    num1 = num1+event.target.innerText;
+                    resultDisplay = num1;
+                    //console.log("test 2")
+            }   else if(operator){ 
+                    num2 = num2+event.target.innerText;
+                    resultDisplay = num2;
+                    //console.log("test 3")
             }
-            else if(!operator){
-                num1 = num1+event.target.innerText;
-                resultDisplay = num1;
-                //console.log("test 2")
-
-            } else if(operator){ 
-                num2 = num2+event.target.innerText;
-                resultDisplay = num2;
-                console.log("test 3")
-            }
-        }
-         else{
+        }   else{
             if(event.target.innerText === "="){
                 result = Math.floor(eval(num1 + operator + num2));
                 //console.log("test 4");
@@ -37,8 +36,7 @@ buttons.forEach((button) => {
                 clearData();                
             } else {
                 operator = event.target.innerText;
-                //console.log("test 6")
-
+                //console.log("test 6");
             }
          }
       display.innerText = resultDisplay;
@@ -66,7 +64,6 @@ buttons.forEach((button) => {
 //   });
   
 /*-------------------------------- Functions --------------------------------*/
-
 clearData = () => {
         num1 = '';
         num2 = '';
