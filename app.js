@@ -62,19 +62,19 @@ const calculate = (Num1, Num2, Operator) => {
     let calculated;
     switch (Operator) {
         case '+':
-            calculated = parseInt(Num1) + parseInt(Num2);
+            calculated = parseFloat(Num1) + parseFloat(Num2);
             //console.log("test addition");
             break;
         case '-':
-            calculated = Num1 - Num2;
+            calculated = parseFloat(Num1) - parseFloat(Num2);
             //console.log("test minus");
             break;
         case '/':
-            calculated = Num1 / Num2;
+            calculated = parseFloat(Num1) / parseFloat(Num2);
             //console.log("test divide");
             break;
         case '*':
-            calculated = Num1 * Num2;
+            calculated = parseFloat(Num1) * parseFloat(Num2);
             //console.log("test multiplication");
             break;
     }
