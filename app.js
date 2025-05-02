@@ -7,7 +7,7 @@ let num2 = ''; //input 2
 let resultDisplay = ''; //result displayed to the user
 let result; // stored result
 let operator = ''; // operator
-let operatorStored = '';
+let operatorStored = ''; // stores previous operator
 /*------------------------ Cached Element References ------------------------*/
 const buttons = document.querySelectorAll('.button');
 const calculator = document.querySelector('#calculator');
