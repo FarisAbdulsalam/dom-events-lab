@@ -1,5 +1,7 @@
 // can only do two numbers at a time (multiple digits per number work fine)
-// couldn't figure out how to do more than 2 numbers (ex: press 2 + 2 then press an operator to use the previous result as num1)
+// couldn't figure out how to do more than 2 numbers 
+// (ex: press 2 + 2 then press an operator to use the previous result as num1, or do 2+3+5 as one operation)
+// also unsure how to implement order of operations
 /*-------------------------------- Constants --------------------------------*/
 /*-------------------------------- Variables --------------------------------*/
 let num1 = ''; //input 1
